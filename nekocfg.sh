@@ -36,11 +36,12 @@ case "$1" in
         ;;
     install)
         echo -e "${GREEN}Installing dotfiles...${RESET}"
-        ln -sf ~/dotfiles/.config/kitty/ ~/.config/
-        ln -sf ~/dotfiles/.config/fish/ ~/.config/
+        ln -sfv ~/dotfiles/.config/kitty/ ~/.config/
+        ln -sfv ~/dotfiles/.config/fish/ ~/.config/
         ;;
     update)
         echo -e "${GREEN}Updating dotfiles...${RESET}"
+        echo "TODO!"
         ;;
     backup)
         echo -e "${GREEN}Backing up dotfiles...${RESET}"
