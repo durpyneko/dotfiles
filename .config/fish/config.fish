@@ -4,5 +4,5 @@ end
 
 function fish_greeting
     # fortune | cowsay | lolcat
-    cat ~/Documents/ascii/banner.txt | lolcat
+    cat ~/dotfiles/misc/ascii/banner.txt | lolcat
 end
