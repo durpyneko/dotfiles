@@ -1,6 +1,6 @@
 # nyanix dots
 
 ```sh
-bash nekocfg.sh install
 bash nekocfg.sh rebuild
+bash nekocfg.sh install
 ```
