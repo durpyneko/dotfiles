@@ -8,3 +8,5 @@
 bash nekocfg.sh rebuild
 bash nekocfg.sh install
 ```
+
+![bg](/misc/images/bg.png)
