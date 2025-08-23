@@ -38,6 +38,9 @@
             # * Applications
             ./nixos/apps/spicetify.nix
 
+            # * Extentions / Modules
+            ./nixos/module/wallpaper-engine-kde-plugin.nix
+
             ./nixos/hosts/nyanix/users.nix # ? Users
             ./nixos/hosts/nyanix/nyanix.nix # ? Core
             ./nixos/hosts/nyanix/config.nix # ? Configurations
