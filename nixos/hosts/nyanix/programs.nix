@@ -26,4 +26,6 @@
       obs-pipewire-audio-capture
     ];
   };
+
+  programs.direnv.enable = true;
 }
