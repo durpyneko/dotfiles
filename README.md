@@ -4,9 +4,15 @@
 </div>
 </br>
 
-```sh
-bash nekocfg.sh rebuild
-bash nekocfg.sh install
+```bash
+bash nyancfg.sh rebuild
+bash nyancfg.sh install
 ```
 
 ![bg](/misc/images/bg.png)
+
+# TODO
+
+- [ ] nyancfg set wallpaper when install dotfiles.
+- [ ] change / backup wallpaper via nyancfg
+- [ ] save / set kde plasma layout / config
