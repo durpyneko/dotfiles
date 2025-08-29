@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  # * Samba shares
   services.samba = {
     enable = true;
     securityType = "user";
@@ -32,5 +33,27 @@
 
   services.openssh.enable = true;
 
-  services.printing.enable = true;
+  # * Audio
+  services.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+
+    # Fix audio crackling with pipewire
+    # This helped:
+    # https://www.reddit.com/r/linux_gaming/comments/1gy347h/comment/lylqijj/
+    extraConfig.pipewire."92-low-latency" = {
+      "context.properties" = {
+        "default.clock.rate" = 48000;
+        "default.clock.quantum" = 1024;
+        "default.clock.min-quantum" = 1024;
+        "default.clock.max-quantum" = 1024;
+      };
+    };
+  };
+
+  services.printing.enable = false;
 }
