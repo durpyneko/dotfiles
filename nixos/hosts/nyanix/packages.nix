@@ -14,6 +14,8 @@
     yt-dlp
     fish
     git
+    dua
+    yazi
   ];
 
   fonts.packages = with pkgs; [
@@ -27,6 +29,7 @@
     packages = with pkgs; [
       # * Apps
       kdePackages.kate
+      # kdePackages.wallpaper-engine-plugin
       unstable.vesktop
       vscode
       bottles
@@ -35,6 +38,9 @@
       qbittorrent
       kitty
       github-desktop
+
+      # * Dev
+      rustup
 
       # * Misc
       lolcat
