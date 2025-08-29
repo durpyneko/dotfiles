@@ -39,8 +39,9 @@
             ./nixos/apps/spicetify.nix
 
             # * Extentions / Modules
-            ./nixos/module/wallpaper-engine-kde-plugin.nix
+            # ./nixos/module/wallpaper-engine-kde-plugin.nix
 
+            # * Host
             ./nixos/hosts/nyanix/users.nix # ? Users
             ./nixos/hosts/nyanix/nyanix.nix # ? Core
             ./nixos/hosts/nyanix/config.nix # ? Configurations
@@ -48,6 +49,8 @@
             ./nixos/hosts/nyanix/programs.nix # ? Programs
             ./nixos/hosts/nyanix/services.nix # ? Services
             ./nixos/hosts/nyanix/nyanix-hw.nix # ? Hardware
+
+            # { nixos.pkgs.wallpaper-engine-kde-plugin.enable = true; }
 
           ];
         };
