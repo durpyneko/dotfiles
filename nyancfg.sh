@@ -9,6 +9,8 @@ GREEN="\033[32m"
 YELLOW="\033[33m"
 CYAN="\033[36m"
 
+host=$(hostname)
+
 log_info()    { echo -e "${GREEN}[INFO]${RESET} $1"; }
 log_warning() { echo -e "${YELLOW}[WARN]${RESET} $1"; }
 log_error()   { echo -e "${RED}[ERROR]${RESET} $1"; }
@@ -42,8 +44,8 @@ install_dotfiles() {
 }
 
 rebuild_nix() {
-    echo -e "${GREEN}Starting Nyanix rebuild...${RESET}"
-    sudo nixos-rebuild switch --print-build-logs --flake .
+    echo -e "${GREEN}Starting Nyanix rebuild for host \`${host}\`...${RESET}"
+    sudo nixos-rebuild switch --print-build-logs --flake .#$host
     if [ $? -eq 0 ]; then
         log_info "Rebuild finished successfully!"
     else
@@ -53,7 +55,7 @@ rebuild_nix() {
 
 case "$1" in
     hostname)
-        echo -e "${YELLOW}hostname:${RESET} $(hostname)"
+        echo -e "${YELLOW}hostname:${RESET} $host"
         ;;
     install|-i)
         install_dotfiles
