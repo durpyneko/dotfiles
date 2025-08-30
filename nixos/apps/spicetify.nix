@@ -24,10 +24,7 @@ in
       shuffle
       goToSong
       queueTime
-      adblockify
       hidePodcasts
-      autoSkipVideo
-      copyToClipboard
       showQueueDuration
     ];
     enabledCustomApps = with apps; [
