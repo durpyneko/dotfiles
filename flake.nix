@@ -41,13 +41,15 @@
             # * Extentions / Modules
             # ./nixos/module/wallpaper-engine-kde-plugin.nix
 
-            # * Host
-            ./nixos/hosts/nyanix/users.nix # ? Users
+            # * Host / Self
+            ./nixos/hosts/nyanix/cfg.nix # ? Configurations
+            ./nixos/hosts/nyanix/env.nix # ? Env Variables
+            ./nixos/hosts/nyanix/pkgs.nix # ? Packages
+            ./nixos/hosts/nyanix/usrs.nix # ? Users
+            ./nixos/hosts/nyanix/svcs.nix # ? Services
+            ./nixos/hosts/nyanix/ntwrk.nix # ? Network stuff
+            ./nixos/hosts/nyanix/progs.nix # ? Programs
             ./nixos/hosts/nyanix/nyanix.nix # ? Core
-            ./nixos/hosts/nyanix/config.nix # ? Configurations
-            ./nixos/hosts/nyanix/packages.nix # ? Packages
-            ./nixos/hosts/nyanix/programs.nix # ? Programs
-            ./nixos/hosts/nyanix/services.nix # ? Services
             ./nixos/hosts/nyanix/nyanix-hw.nix # ? Hardware
 
             # { nixos.pkgs.wallpaper-engine-kde-plugin.enable = true; }

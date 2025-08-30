@@ -6,16 +6,17 @@
 
   # * System
   environment.systemPackages = with pkgs; [
-    wget
-    btop
-    fastfetch
-    lsd
-    ffmpeg-full
-    yt-dlp
-    fish
     git
+    lsd
     dua
+    vim
     yazi
+    fish
+    btop
+    wget
+    yt-dlp
+    fastfetch
+    ffmpeg-full
   ];
 
   fonts.packages = with pkgs; [
@@ -28,24 +29,30 @@
   users.users.durpy = {
     packages = with pkgs; [
       # * Apps
-      kdePackages.kate
-      # kdePackages.wallpaper-engine-plugin
-      unstable.vesktop
-      vscode
-      bottles
       vlc
       gimp
-      qbittorrent
       kitty
+      vscode
+      bottles
+      qbittorrent
       github-desktop
+      unstable.vesktop
+      kdePackages.kate
+      # kdePackages.wallpaper-engine-plugin
 
       # * Dev
       rustup
+      python3
+
+      # * Tui
+      nyaa
+      ani-cli
 
       # * Misc
       lolcat
-      fortune
       cowsay
+      fortune
+      vlc-bittorrent
       nixfmt-rfc-style
     ];
   };
